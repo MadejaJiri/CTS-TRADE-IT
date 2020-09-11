@@ -10,7 +10,7 @@ The program can be executed with run_script.exe or (for better clarity) run_exe.
 Run run_exe.bat
 
 ### Running the program (from source code)
-Before you run the source code, it's a good idea to create virtual environment for Python execution.
+Before you run the source code, it's a good idea to create virtual environment for Python execution. Step by step below.
 
 
 #### Installation (Windows 10)
