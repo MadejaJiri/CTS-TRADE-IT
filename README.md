@@ -13,14 +13,20 @@ Before you run the source code, it's a good idea to create virtual environment f
 
 #### Installation (Windows 10)
 ```bash
-#Install Python 3.7 (64-bit)
-#Open command-line from the root directory of this project
-python -m venv venv_new
-venv_new\Scripts\activate
+# Install Python 3.7 (64-bit)
+# Open command-line from the root directory of this project
+
+# Create new virtual environment (notice: use correct version of Python)
+python -m venv cts_venv
+
+# Activate the virtual environment
+cts_venv\Scripts\activate
+
+# Install requirements to the virtual environment
 pip install -r requirements.txt
 ```
 #### Running
+You can manually activate the virtual environment and run the .py script or just run the batch file.
 ```bash
-#With the virtual environment activated (assumed continuation of the installation part, otherwise activate the virtual environment with venv_new\Scripts\activate)
-python CTS_TRADEIT_TRIAL.py
+run_script.bat
 ```

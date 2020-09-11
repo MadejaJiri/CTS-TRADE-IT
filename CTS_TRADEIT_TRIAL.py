@@ -1,6 +1,7 @@
 import bs4 as bs
 import urllib.request
 from slugify import slugify
+import multiprocessing
 from multiprocessing import Pool
 
 
@@ -64,4 +65,5 @@ def save_position_to_file(position):
         f.write(file_content) 
 
 if __name__ == "__main__":
+    multiprocessing.freeze_support()  # .exe file does not work without this line (due to multiprocessing issues)
     main()
