@@ -15,10 +15,12 @@ Before you run the source code, it's a good idea to create virtual environment f
 ```bash
 #Install Python 3.7 (64-bit)
 #Open command-line from the root directory of this project
-#python -m venv venv_new
-#venv_new\Scripts\activate
-#pip install -r requirements.txt
+python -m venv venv_new
+venv_new\Scripts\activate
+pip install -r requirements.txt
 ```
 #### Running
+```bash
 #With the virtual environment activated (assumed continuation of the installation part)
-#python CTS_TRADEIT_TRIAL.py
+python CTS_TRADEIT_TRIAL.py
+```
