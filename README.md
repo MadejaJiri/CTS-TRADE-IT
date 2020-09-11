@@ -6,6 +6,7 @@ Author: Jiří Madeja
 
 ### Running the program (the easy way)
 The program can be executed with run_script.exe or (for better clarity) run_exe.bat
+
 Run run_exe.bat
 
 ### Running the program (from source code)
