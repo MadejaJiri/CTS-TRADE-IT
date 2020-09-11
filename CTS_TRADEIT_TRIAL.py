@@ -1,12 +1,14 @@
 import bs4 as bs
 import urllib.request
-import base64
 from slugify import slugify
 from multiprocessing import Pool
 
 
 def main():
-
+    """
+    Gets positions from website. Goes through all
+    positions and get their names and description.
+    """
     job_positions = get_job_positions()
     jobs = []
 
@@ -28,8 +30,9 @@ def get_job_positions(url="https://www.cts-tradeit.cz/kariera/"):
     soup = bs.BeautifulSoup(source,'lxml')
     positions = []
     for url in soup.find_all('a'):
-        if url.get("href").startswith("/kariera/") and url.get("href") != "/kariera/":
-            positions.append(url.get('href'))
+        if url.get("href").startswith("/kariera/"):
+            if url.get("href") != "/kariera/":
+                positions.append(url.get('href'))
     return positions
     
 def get_position_info(position_name):
