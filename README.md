@@ -21,6 +21,6 @@ pip install -r requirements.txt
 ```
 #### Running
 ```bash
-#With the virtual environment activated (assumed continuation of the installation part)
+#With the virtual environment activated (assumed continuation of the installation part, otherwise activate the virtual environment with venv_new\Scripts\activate)
 python CTS_TRADEIT_TRIAL.py
 ```
