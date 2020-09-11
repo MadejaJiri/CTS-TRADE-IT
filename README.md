@@ -5,7 +5,8 @@ This program downloads all job listings from (https://www.cts-tradeit.cz/kariera
 Author: Jiří Madeja
 
 ### Running the program (the easy way)
-Run run_script.exe
+# The program can be executed with run_script.exe or (for better clarity) run_exe.bat
+Run run_exe.bat
 
 ### Running the program (from source code)
 Before you run the source code, it's a good idea to create virtual environment for Python execution.
