@@ -2,14 +2,20 @@ import bs4 as bs
 import urllib.request
 import base64
 from slugify import slugify
+from multiprocessing import Pool
+
 
 def main():
+
     job_positions = get_job_positions()
     jobs = []
-    for position in job_positions:
-        jobs.append(get_position_info(position))
-    print(jobs)    
-    for job in jobs:
+
+    p = Pool(processes=len(job_positions))
+    
+    data = p.map(get_position_info, [link for link in job_positions])
+    p.close()
+
+    for job in data:
         save_position_to_file(job)
     
 
@@ -46,11 +52,10 @@ def get_position_info(position_name):
     return (name, description)
 
 def save_position_to_file(position):
-    position_name = "-".join(position[0].split("\\"))
-    position_name_clean = slugify(position_name)  # position name
-    print(position_name)
+    
+    position_name_clean = slugify(position[0])  # position name
+
     file_content = position[1]  # position description
-    print(file_content)
     
     with open(position_name_clean + ".txt", "w") as f: 
         f.write(file_content) 
